@@ -24,10 +24,36 @@ function isLegal(age: number): boolean{
 let x = isLegal(19);*/
 
 
-function runAfter15(fn: () => void) {
+/*function runAfter15(fn: () => void) {
     setTimeout(fn, 1000);
 }
 
 runAfter15(function() {
     console.log("hi there");
+})*/
+
+
+//Interfaces-->
+interface User {
+	firstName: string;
+	lastName: string;
+	email: string;
+	age: number;
+}
+
+
+function isLegal(User){
+    if(User.age>18){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+isLegal({
+    firsName: "Akash",
+    lastName: "sharma",
+    email: "akash@gmail.com",
+    Age: 23
 })
